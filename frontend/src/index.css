@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, "SF Pro Display", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  color: #152033;
+  background: #f4f7f8;
+  font-synthesis: none;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f4f7f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-title { @apply mt-1 text-3xl font-bold tracking-[-0.035em] text-slate-900 sm:text-4xl; }
+.eyebrow { @apply text-[11px] font-bold uppercase tracking-[0.18em] text-teal-700; }
+.card { @apply rounded-2xl border border-slate-200/90 bg-white p-5 shadow-[0_1px_2px_rgba(15,23,42,0.03),0_10px_28px_rgba(15,23,42,0.045)]; }
+.btn-primary { @apply inline-flex items-center justify-center rounded-lg bg-teal-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-teal-800 hover:shadow-md focus:outline-none focus:ring-4 focus:ring-teal-100 disabled:cursor-not-allowed disabled:opacity-60; }
+.btn-secondary { @apply inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-slate-300 hover:bg-slate-50 focus:outline-none focus:ring-4 focus:ring-slate-100; }
+.btn-dark-outline { @apply inline-flex items-center justify-center rounded-lg border border-slate-600/70 bg-slate-950/20 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10 focus:outline-none focus:ring-4 focus:ring-white/10; }
+.nav-link { @apply rounded-lg px-3 py-2 text-sm font-semibold text-slate-500 transition hover:bg-slate-100 hover:text-slate-900; }
+.nav-link-active { @apply bg-slate-100 text-slate-900; }
+.field { @apply grid gap-2 text-sm font-semibold text-slate-700; }
+.field input, .field select { @apply w-full rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-3 text-sm font-normal text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-teal-600 focus:bg-white focus:ring-4 focus:ring-teal-50; }
+.field input[type="range"] { @apply px-0 py-1 accent-teal-600; }
+.check { @apply flex items-center gap-2 text-sm font-medium text-slate-700; }
+.auth-shell { @apply relative grid min-h-screen place-items-center overflow-hidden bg-slate-950 px-5 py-10; }
+.auth-shell::before { content: ""; position: absolute; width: 42rem; height: 42rem; border-radius: 9999px; background: radial-gradient(circle, rgba(20,184,166,.24), transparent 68%); top: -18rem; right: -16rem; }
+.auth-shell::after { content: ""; position: absolute; width: 30rem; height: 30rem; border-radius: 9999px; border: 1px solid rgba(94,234,212,.13); bottom: -17rem; left: -12rem; }
+.auth-shell .card { @apply relative z-10 border-slate-200/90 p-7 sm:p-9; box-shadow: 0 30px 80px rgba(2,6,23,.34); }
+.auth-shell .card > a { @apply text-sm font-bold tracking-[0.12em] text-slate-900; }
+.auth-shell h1 { @apply text-slate-950; }
+.score-badge { @apply rounded-full bg-teal-50 px-3 py-1 text-lg text-teal-800; }
+.slot { @apply grid aspect-square min-h-20 place-items-center rounded-xl border p-2 text-center text-xs font-medium transition hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-4 focus:ring-teal-100; }
+.slot span { @apply text-[10px] opacity-80; }
+.slot-available { @apply border-emerald-200 bg-emerald-50 text-emerald-800; }
+.slot-occupied { @apply border-slate-300 bg-slate-100 text-slate-600; }
+.slot-reserved { @apply border-rose-200 bg-rose-50 text-rose-800; }
+.slot-recommended { @apply border-2 border-teal-600 bg-teal-100 text-teal-900 ring-2 ring-teal-100; }
+.slot-ev { @apply border-violet-200 bg-violet-50 text-violet-800; }
+.slot-accessible { @apply border-amber-200 bg-amber-50 text-amber-800; }
+table { @apply w-full text-left text-sm; }
+th { @apply border-b border-slate-200 bg-slate-50/70 px-3 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-slate-500; }
+td { @apply border-b border-slate-100 px-3 py-3 text-slate-700; }
+tr:last-child td { @apply border-b-0; }
